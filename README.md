@@ -1,12 +1,5 @@
 # fyk‘s blog
-\documentclass[UTF8]{ctexart}
 
-\begin{document}
-\section{一些想法}
 最近一个学期一直很迷茫，思考着我人生的方向与意义，但终究是没有结果的。过往的价值体系全然崩塌，高中那套唯分数论的幼稚想法早已过时。那我究竟应该干些什么呢？
 
 开学时
-
-\subsection{中文子标题}
-更多中文内容。
-\end{document}
