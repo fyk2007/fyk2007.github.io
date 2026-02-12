@@ -5,7 +5,7 @@ url: "https:fyk2007.github.io"   # 用户站
 # baseurl: ""                       # 用户站必须为空；项目站则写 "/仓库名"
 
 # ---------- 主题配置（关键！）----------
-remote_theme: pages-themes/tactile@v0.2.0
+remote_theme: pages-themes/time-machine@v0.2.0
 # 可选主题：architect, cayman, dinky, hacker, leap-day, merlot, 
 #          midnight, minima, minimal, modernist, slate, tactile, time-machine
 # 示例：remote_theme: pages-themes/cayman@v0.2.0
