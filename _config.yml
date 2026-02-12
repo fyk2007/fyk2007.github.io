@@ -1,3 +1,22 @@
-title: 我的技术博客
-description: 记录学习与开发
-theme: Tactile
+# 基础站点信息
+title: fyk's blog
+description: 记录点什么
+url: "https:fyk2007.github.io"   # 用户站
+# baseurl: ""                       # 用户站必须为空；项目站则写 "/仓库名"
+
+# ---------- 主题配置（关键！）----------
+remote_theme: pages-themes/architect@v0.2.0
+# 可选主题：architect, cayman, dinky, hacker, leap-day, merlot, 
+#          midnight, minima, minimal, modernist, slate, tactile, time-machine
+# 示例：remote_theme: pages-themes/cayman@v0.2.0
+
+# ---------- 必需插件（固定）----------
+plugins:
+  - jekyll-remote-theme   # 加载远程主题的核心插件
+
+# ---------- 全局布局（解决样式丢失）----------
+defaults:
+  - scope:
+      path: ""            # 应用于所有文件
+    values:
+      layout: "default"   # 官方主题统一使用 default 布局
