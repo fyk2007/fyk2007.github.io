@@ -1,5 +1,6 @@
 ---
 layout: page
 title: "fyk's blog"
-permalink: /about/contact/
+permalink: /directory/
 ---
+这里是fyk‘s blog的目录
