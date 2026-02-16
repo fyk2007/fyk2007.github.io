@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: 文章目录
 permalink: /directory/
 ---
