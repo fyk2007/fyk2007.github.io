@@ -1,0 +1,25 @@
+<div class="post-nav-links">
+  {% if page.previous %}
+    <a class="post-nav-link post-nav-link--prev" href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
+      <span class="post-nav-label">上一篇</span>
+      <span class="post-nav-title">{{ page.previous.title }}</span>
+    </a>
+  {% else %}
+    <span class="post-nav-link post-nav-link--disabled">
+      <span class="post-nav-label">上一篇</span>
+      <span class="post-nav-title">没有了</span>
+    </span>
+  {% endif %}
+
+  {% if page.next %}
+    <a class="post-nav-link post-nav-link--next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">
+      <span class="post-nav-label">下一篇</span>
+      <span class="post-nav-title">{{ page.next.title }}</span>
+    </a>
+  {% else %}
+    <span class="post-nav-link post-nav-link--disabled">
+      <span class="post-nav-label">下一篇</span>
+      <span class="post-nav-title">没有了</span>
+    </span>
+  {% endif %}
+</div>

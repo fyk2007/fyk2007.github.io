@@ -1,0 +1,15 @@
+<div class="sidebar-block">
+  <h3 class="sidebar-title">目录</h3>
+  <nav id="post-toc" class="post-toc" aria-label="文章目录">
+    <p class="toc-empty">正在生成目录…</p>
+  </nav>
+</div>
+
+<div class="sidebar-block">
+  <h3 class="sidebar-title">翻页</h3>
+  {% include post-nav.html %}
+</div>
+
+<div class="sidebar-block">
+  <a class="sidebar-link" href="{{ '/directory/' | relative_url }}">← 返回文章列表</a>
+</div>
