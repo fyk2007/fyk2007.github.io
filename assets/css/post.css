@@ -55,9 +55,36 @@
   border-left-color: #0f79d0;
 }
 
+.post-toc .toc-h1 a {
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.post-toc .toc-h2 a {
+  padding-left: 12px;
+  font-size: 14px;
+}
+
 .post-toc .toc-h3 a {
   padding-left: 24px;
   font-size: 13px;
+}
+
+.post-toc .toc-h4 a {
+  padding-left: 36px;
+  font-size: 13px;
+}
+
+.post-toc .toc-h5 a {
+  padding-left: 48px;
+  font-size: 12px;
+}
+
+.post-toc .toc-h6 a {
+  padding-left: 60px;
+  font-size: 12px;
+  color: #666;
 }
 
 .toc-empty {
