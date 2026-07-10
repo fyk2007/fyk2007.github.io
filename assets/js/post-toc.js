@@ -6,9 +6,17 @@
     return;
   }
 
-  var headings = article.querySelectorAll("h2, h3");
+  var headings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-  if (!headings.length) {
+  // 跳过与页面标题重复的首个 h1（正文里已被 CSS 隐藏）
+  var visibleHeadings = Array.prototype.filter.call(headings, function (heading, index) {
+    if (heading.tagName === "H1" && index === 0) {
+      return false;
+    }
+    return true;
+  });
+
+  if (!visibleHeadings.length) {
     toc.innerHTML = "<p class=\"toc-empty\">本文暂无章节标题</p>";
     return;
   }
@@ -38,13 +46,14 @@
 
   var list = document.createElement("ul");
 
-  headings.forEach(function (heading) {
+  visibleHeadings.forEach(function (heading) {
     if (!heading.id) {
       heading.id = slugify(heading.textContent || "");
     }
 
+    var level = parseInt(heading.tagName.charAt(1), 10);
     var item = document.createElement("li");
-    item.className = heading.tagName === "H3" ? "toc-h3" : "toc-h2";
+    item.className = "toc-h" + level;
 
     var link = document.createElement("a");
     link.href = "#" + heading.id;
@@ -67,7 +76,7 @@
   function updateActiveLink() {
     var activeId = "";
 
-    headings.forEach(function (heading) {
+    visibleHeadings.forEach(function (heading) {
       var rect = heading.getBoundingClientRect();
       if (rect.top <= 120) {
         activeId = heading.id;
